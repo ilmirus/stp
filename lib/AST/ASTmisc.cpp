@@ -25,6 +25,9 @@ THE SOFTWARE.
 #include "stp/AST/AST.h"
 #include "stp/STPManager/STPManager.h"
 #include "stp/Util/NodeIterator.h"
+
+#include <sys/time.h>
+
 #ifdef _MSC_VER
 // avoid TRUE and FALSE to be set to 1 and 0 in winmin.h
 #define TRUE TRUE
@@ -33,8 +36,6 @@ THE SOFTWARE.
 // Needed for signal()
 #include <unistd.h>
 #endif
-
-#include <sys/time.h>
 
 namespace stp
 {

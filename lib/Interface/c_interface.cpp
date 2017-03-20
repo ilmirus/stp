@@ -1984,8 +1984,14 @@ extern void cvc_switch_to_buffer (YY_BUFFER_STATE new_buffer  );
 extern void smt_switch_to_buffer (YY_BUFFER_STATE new_buffer  );
 #endif
 
-int smt_scan_string(const char* yy_str);
-int cvc_scan_string(const char* yy_str);
+#ifndef YY_TYPEDEF_YY_BUFFER_STATE
+struct yy_buffer_state;
+#define YY_TYPEDEF_YY_BUFFER_STATE
+typedef struct yy_buffer_state *YY_BUFFER_STATE;
+#endif
+
+extern YY_BUFFER_STATE smt_scan_string(const char* yy_str);
+extern YY_BUFFER_STATE cvc_scan_string(const char* yy_str);
 
 int vc_parseMemExpr(VC vc, const char* s, Expr* oquery, Expr* oasserts)
 {

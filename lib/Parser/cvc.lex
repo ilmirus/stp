@@ -26,6 +26,8 @@
 %option yylineno
 %x    COMMENT
 %x    STRING_LITERAL
+%x  YY_NO_UNISTD_H
+
 LETTER    ([a-zA-Z])
 HEX       ([0-9a-fA-F])
 BITS      ([0-1])

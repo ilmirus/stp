@@ -29,9 +29,7 @@ THE SOFTWARE.
 #include <string>
 #include <algorithm>
 #include <ctime>
-#include <unistd.h>
 #include <stdio.h>
-#include <unistd.h>
 #include <vector>
 
 namespace stp

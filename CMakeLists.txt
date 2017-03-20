@@ -324,6 +324,9 @@ else()
   message(STATUS "OK, found Minisat library under ${MINISAT_LIBRARIES} and Minisat include dirs under ${MINISAT_INCLUDE_DIR}")
 endif()
 include_directories(${MINISAT_INCLUDE_DIR})
+if(WIN32)
+  include_directories(${ZLIB_INCLUDE_DIR})
+endif()
 set(LIBS ${LIBS} ${MINISAT_LIBRARIES})
 
 # -----------------------------------------------------------------------------

@@ -64,6 +64,7 @@
 %x	COMMENT
 %x	STRING_LITERAL
 %x      USER_VALUE
+%x  YY_NO_UNISTD_H
 
 LETTER	([a-zA-Z])
 DIGIT	([0-9])
