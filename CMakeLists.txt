@@ -223,6 +223,9 @@ if(WIN32)
       string(REGEX REPLACE "/STACK:[0-9]+" "" CMAKE_EXE_LINKER_FLAGS ${CMAKE_EXE_LINKER_FLAGS})
       set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /STACK:256000000")
 
+      # Generate symbols
+      add_definitions("/Zi")
+
       # inline is not a keyword in visual studios old C version, allow its redefinition
       add_definitions("-D_ALLOW_KEYWORD_MACROS")
   endif()
